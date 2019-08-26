@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/margin_top_20_dp"
+            android:layout_marginStart="@dimen/margin_start_end_10dp"
+            android:src="@mipmap/logo2" />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_marginStart="@dimen/margin_start_end_20dp"
+            android:layout_marginTop="@dimen/margin_top_20_dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/login"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_heading_text_size"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_below="@id/login"
+            android:layout_marginStart="@dimen/margin_start_end_20dp"
+            android:layout_marginTop="@dimen/margin_top_20_dp"
+            android:layout_marginEnd="@dimen/margin_start_end_20dp"
+            android:background="@drawable/round_line_background"
+            android:drawableStart="@drawable/email"
+            android:drawablePadding="@dimen/drawable_padding_10_dp"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/padding_start_end_20dp"
+            android:paddingEnd="@dimen/padding_start_end_20dp" />
+
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_below="@id/et_email"
+            android:layout_marginStart="@dimen/margin_start_end_20dp"
+            android:layout_marginTop="@dimen/margin_top_20_dp"
+            android:layout_marginEnd="@dimen/margin_start_end_20dp"
+            android:background="@drawable/round_line_background"
+            android:drawableStart="@drawable/lock"
+            android:drawablePadding="@dimen/drawable_padding_10_dp"
+            android:hint="@string/password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/padding_start_end_20dp"
+            android:paddingEnd="@dimen/padding_start_end_20dp"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_forgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_top_20_dp"
+            android:gravity="center_horizontal"
+            android:text="@string/forgot_password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/secondary_text"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/ll_remember"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_forgot"
+            android:layout_marginStart="@dimen/margin_start_end_20dp"
+            android:layout_marginTop="@dimen/margin_top_20_dp"
+            android:layout_marginEnd="@dimen/margin_start_end_20dp"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/radioRemember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:checked="false"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="@string/remember" />
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/edittext_height"
+                android:clickable="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/round_button_green"
+                android:focusable="true">
+
+                <Button
+                    android:id="@+id/tv_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="@dimen/padding_start_end_20dp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/list_item_titles_important_text_snippets"
+                    android:textStyle="bold"
+                    android:text="@string/login"
+                    tools:ignore="RtlSymmetry" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/padding_15dp"
+                    android:src="@mipmap/right_arrow" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_or"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_remember"
+            android:layout_marginTop="@dimen/margin_top_20_dp"
+            android:layout_marginBottom="@dimen/margin_bottom20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <View
+                android:layout_width="@dimen/or_view_width"
+                android:layout_height="@dimen/or_view_height_1dp"
+                android:background="@color/gray" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/or"
+                android:textColor="@color/black"
+                android:textSize="@dimen/list_item_titles_important_text_snippets"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="@dimen/or_view_width"
+                android:layout_height="@dimen/or_view_height_1dp"
+                android:background="@color/gray" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_social"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_or"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_facebook"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/facebook_background"
+                android:text="@string/facebook"
+                android:textAllCaps="false"
+                android:textSize="@dimen/list_item_titles_important_text_snippets"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginStart="@dimen/margin_start_end_10dp"
+                android:background="@drawable/round_button_google"
+                android:padding="14dp"
+                android:src="@drawable/google"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_social"
+            android:layout_marginTop="@dimen/margin_top_20_dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/dont_have_an_account"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/create_account"
+                android:textColor="@color/green"
+                android:textSize="@dimen/secondary_text"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

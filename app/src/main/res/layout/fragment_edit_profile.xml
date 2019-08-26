@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".views.fragments.profileFragments.EditProfileFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@mipmap/back"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/questrial_regular"
+            android:text="Profile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/page_titles"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="Save"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_above">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:visibility="gone">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_profile"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/upload_photo" />
+
+
+                    <TextView
+                        android:id="@+id/tv_change_photo"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_profile"
+                        android:gravity="center_horizontal"
+                        android:text="Chnage Photo" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingStart="20sp"
+                        android:text="Email"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry,SpUsage" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Email"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/list_item_titles_important_text_snippets"
+                        tools:ignore="SpUsage" />
+
+                    <TextView
+                        android:id="@+id/tv_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        tools:ignore="SpUsage" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_email"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Full Name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/list_item_titles_important_text_snippets"
+                        tools:ignore="SpUsage" />
+
+                    <EditText
+                        android:id="@+id/et_full_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:inputType="textCapSentences"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        android:textStyle="bold"
+                        tools:ignore="SpUsage" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/light_gray" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Phone Number"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        tools:ignore="SpUsage" />
+
+                    <EditText
+                        android:id="@+id/et_edit_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:inputType="phone"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        android:textStyle="bold"
+                        tools:ignore="SpUsage" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/light_gray" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="DOB"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        android:visibility="gone"
+                        tools:ignore="SpUsage" />
+
+                    <TextView
+                        android:id="@+id/tv_edit_date_of_birth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="13 Nov 1992"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        tools:ignore="SpUsage" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/light_gray"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/tv_adults_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Adults"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        tools:ignore="SpUsage" />
+
+                    <EditText
+                        android:id="@+id/et_adults"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:inputType="number"
+                        android:nextFocusDown="@id/et_kids_under14"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        android:textStyle="bold"
+                        tools:ignore="SpUsage" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/light_gray" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Kids under 14"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        tools:ignore="SpUsage" />
+
+                    <EditText
+                        android:id="@+id/et_kids_under14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:inputType="number"
+                        android:nextFocusDown="@id/et_location"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        android:textStyle="bold"
+                        tools:ignore="SpUsage" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/light_gray" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="LOCATION"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        tools:ignore="SpUsage" />
+
+                    <EditText
+                        android:id="@+id/et_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:inputType="text"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        android:textStyle="bold"
+                        tools:ignore="SpUsage" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/light_gray" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="POSTAL CODE"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        tools:ignore="SpUsage" />
+
+                    <EditText
+                        android:id="@+id/et_postal_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:inputType="numberDecimal"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        android:textStyle="bold"
+                        tools:ignore="SpUsage" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/light_gray" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="GENDER"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/heading_text_size"
+                        tools:ignore="SpUsage" />
+
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="40sp"
+                        android:layout_marginLeft="50sp"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginRight="50sp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbtn_male"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/green"
+                            android:checked="false"
+                            android:text="Male" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_female"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/green"
+                            android:checked="false"
+                            android:text="Female" />
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/light_gray"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </ScrollView>
+
+
+</RelativeLayout>

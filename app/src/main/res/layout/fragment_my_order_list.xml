@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".views.fragments.profileFragments.MyOrderListFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@mipmap/back"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="My Order list"
+            android:textColor="@color/black"
+            android:textSize="@dimen/page_titles"
+            android:textStyle="bold"
+            android:fontFamily="@font/questrial_regular" />
+    </RelativeLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_my_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_above"
+        android:layout_margin="10dp" />
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_no_order_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No order found in list"
+        android:textSize="@dimen/list_item_titles_important_text_snippets"
+        android:textStyle="bold"
+        android:layout_below="@id/rl_above"
+        android:layout_marginTop="30sp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

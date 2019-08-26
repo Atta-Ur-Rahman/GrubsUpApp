@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".views.fragments.profileFragments.PaymentMethodFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@mipmap/back"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Payment Method"
+            android:textColor="@color/black"
+            android:textSize="@dimen/page_titles"
+            android:textStyle="bold"
+            android:fontFamily="@font/questrial_regular" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_above">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_outer"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:padding="10dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardElevation="3dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/circle_back"
+                        tools:ignore="RtlHardcoded">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/checked" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_contact_us_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:layout_toEndOf="@id/ll_circle"
+                        android:layout_marginLeft="10dp"
+                        android:text="XXXX-2345"
+                        android:paddingStart="10dp"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <Button
+                android:id="@+id/btn_add_new_card"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_view_outer"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/round_button_purple"
+                android:text="Add New Card"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

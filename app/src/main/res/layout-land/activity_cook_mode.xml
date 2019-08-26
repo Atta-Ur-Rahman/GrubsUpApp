@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.activities.CookModeActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/sw_night_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20sp"
+        android:checked="false"
+        android:text="Night Mode"
+        android:textSize="14dp"
+        android:theme="@style/SCBSwitchNightMode"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_cook_mode_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Cook Mode"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/white"
+                android:background="@mipmap/shadow"
+                android:gravity="center_horizontal"
+                android:paddingTop="20dp"
+                android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+
+            <ImageView
+                android:id="@+id/iv_cook_mode_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/back" />
+
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/recipe_main_background"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="@dimen/page_titles" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_title"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="30dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_dots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

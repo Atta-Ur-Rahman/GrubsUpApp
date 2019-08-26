@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/recipe_main_background">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_ingredient_item_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:layerType="software"
+            android:src="@drawable/dotted"
+            android:textColor="@color/black"
+            android:textSize="@dimen/list_item_titles_important_text_snippets"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_toEndOf="@id/tv_ingredient_item_number"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="ingredients"
+            android:textColor="@color/black"
+            android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recipe_category_ingredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_above"
+        android:layout_marginStart="8dp" />
+
+</RelativeLayout>

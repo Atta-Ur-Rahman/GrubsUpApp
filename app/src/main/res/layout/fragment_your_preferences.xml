@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".views.fragments.yourPreferencesFragments.YourPreferencesFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@mipmap/back"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/tv_preference_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/questrial_regular"
+            android:text="@string/your_preferences"
+            android:textColor="@color/black"
+            android:textSize="@dimen/page_titles"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_above">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="40dp"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:id="@+id/ll_family_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="left"
+                    android:text="@string/your_preferences_detail"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/choose_your_dinner_plan"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_dinner_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="left"
+                    android:text="@string/how_big_is_your_family"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:text="Number Of Adults"
+                            android:textSize="@dimen/secondary_text" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/round_button_orange"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:id="@+id/iv_down_arrow_adult_servings"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="5dp"
+                                android:padding="8dp"
+                                android:src="@mipmap/minus" />
+
+                            <TextView
+                                android:id="@+id/tv_adult_servings"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="01"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+                            <ImageView
+                                android:id="@+id/iv_up_arrow_adult_servings"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/ic_circile"
+                                android:padding="10dp"
+                                android:src="@mipmap/plus" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:text="Number Of Kids"
+                            android:textSize="@dimen/secondary_text" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/round_button_orange"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            tools:ignore="RtlHardcoded">
+
+                            <ImageView
+                                android:id="@+id/iv_down_arrow_child_servings"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="5dp"
+                                android:padding="8dp"
+                                android:src="@mipmap/minus" />
+
+                            <TextView
+                                android:id="@+id/tv_child_servings"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="01"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+                            <ImageView
+                                android:id="@+id/iv_up_arrow_child_servings"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/ic_circile"
+                                android:padding="10dp"
+                                android:src="@mipmap/plus" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/light_gray">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Next Week's Recipe"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_next_week_recipe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+
+
+                    <Button
+                        android:id="@+id/btn_subscription"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/round_button_green"
+                        android:text="Next"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/buttons_text_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+         <!--   <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_circle_bargain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/circle_back"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlHardcoded">
+
+                        <ImageView
+                            android:id="@+id/iv_checked_bargain"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/checked"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@id/ll_circle_bargain"
+                        android:layout_toRightOf="@id/ll_circle_bargain"
+                        android:text="Saver"
+                        android:textColor="@color/orange_color"
+                        android:textSize="@dimen/list_item_titles_important_text_snippets"
+                        tools:ignore="RtlHardcoded" />
+
+
+                    <TextView
+                        android:id="@+id/tv_bargain_learn_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="bottom"
+                        android:text="@string/learn_more"
+                        android:textSize="@dimen/secondary_text"
+                        tools:ignore="RtlHardcoded" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_circle_family"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/circle_back"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlHardcoded">
+
+                        <ImageView
+                            android:id="@+id/iv_checked_family"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="TODO"
+                            android:src="@drawable/checked"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/ll_circle_family"
+                        android:text="@string/family_favourites"
+                        android:textColor="@color/orange_color"
+                        android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+
+                    <TextView
+                        android:id="@+id/tv_family_favourite_learn_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="bottom"
+                        android:text="@string/learn_more"
+                        android:textSize="@dimen/secondary_text"
+                        tools:ignore="RtlHardcoded" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_circle_ready"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/circle_back"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlHardcoded">
+
+                        <ImageView
+                            android:id="@+id/iv_checked_ready"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/checked"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@id/ll_circle_ready"
+                        android:layout_toRightOf="@id/ll_circle_ready"
+                        android:text="@string/ready_in_30"
+                        android:textColor="@color/orange_color"
+                        android:textSize="@dimen/list_item_titles_important_text_snippets"
+                        tools:ignore="RtlHardcoded" />
+
+
+                    <TextView
+                        android:id="@+id/tv_ready_learn_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="bottom"
+                        android:text="@string/learn_more"
+                        android:textSize="@dimen/secondary_text" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_circle_weight_loss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/circle_back"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlHardcoded">
+
+                        <ImageView
+                            android:id="@+id/iv_checked_weight_loss"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/checked"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/ll_circle_weight_loss"
+                        android:text="@string/weight_loss"
+                        android:textColor="@color/orange_color"
+                        android:textSize="@dimen/list_item_titles_important_text_snippets"
+                        tools:ignore="RtlHardcoded" />
+
+
+                    <TextView
+                        android:id="@+id/tv_weight_loss_learn_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="bottom"
+                        android:text="@string/learn_more"
+                        android:textSize="@dimen/secondary_text" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_circle_vegetarian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/circle_back"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlHardcoded">
+
+                        <ImageView
+                            android:id="@+id/iv_checked__vegetarian"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/checked"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@id/ll_circle_vegetarian"
+                        android:layout_toRightOf="@id/ll_circle_vegetarian"
+                        android:text="@string/vegetarian"
+                        android:textColor="@color/orange_color"
+                        android:textSize="@dimen/list_item_titles_important_text_snippets"
+                        tools:ignore="RtlHardcoded" />
+
+
+                    <TextView
+                        android:id="@+id/tv_vegetarian_learn_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="bottom"
+                        android:text="@string/learn_more"
+                        android:textSize="@dimen/secondary_text" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+-->
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

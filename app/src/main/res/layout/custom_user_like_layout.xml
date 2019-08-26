@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="330sp"
+    android:layout_height="250sp"
+    android:background="@drawable/dialog_view"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Would you make again?"
+            android:textColor="@color/green"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_rate_this"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/list_item_titles_important_text_snippets"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_button_google"
+            android:paddingStart="30dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="10dp">
+
+
+            <ImageView
+                android:id="@+id/iv_like"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/like" />
+
+            <ImageView
+                android:id="@+id/iv_dis_like"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:layout_toRightOf="@id/iv_like"
+                android:src="@drawable/dislike" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="10dp">
+
+
+            <Button
+                android:id="@+id/btn_no"
+                android:layout_width="140sp"
+                android:layout_height="40sp"
+                android:layout_marginEnd="30sp"
+                android:background="@android:color/transparent"
+                android:text="No"
+                android:textColor="@color/green"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:id="@id/btn_yes"
+                android:layout_width="140sp"
+                android:layout_height="40sp"
+                android:layout_gravity="right"
+                android:background="@drawable/round_button_purple"
+                android:text="Yes"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

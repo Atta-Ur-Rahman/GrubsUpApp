@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".views.ui.loginSingnupFragment.LoginSignupFragment">
+
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_top_login_signup"
+            android:src="@mipmap/app_logo" />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_top_login_signup"
+            android:text="Welcome"
+            android:fontFamily="@font/montserrat_medium"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/main_heading_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lorem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login"
+            android:layout_margin="@dimen/margin10dp"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/nice_the_next_step_is_to_start"
+            android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_signup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_bottom20dp"
+        android:background="@drawable/round_button_purple"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_bottom20dp"
+        android:background="@drawable/round_button_light_red"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+</RelativeLayout>

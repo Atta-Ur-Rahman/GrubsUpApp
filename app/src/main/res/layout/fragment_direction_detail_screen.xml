@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    tools:context=".views.fragments.recipeFragments.DirectionDetailScreenFragment">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recipe_direction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp" />
+
+
+</RelativeLayout>

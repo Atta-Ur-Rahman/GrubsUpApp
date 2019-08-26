@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".views.fragments.profileFragments.SettingFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_end_10dp"
+        android:layout_marginTop="@dimen/margin_top_10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/back"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/questrial_regular"
+            android:text="@string/settings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/page_titles"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_above">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_card_view_height"
+                android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="@dimen/setting_card_view_corner_radius">
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/sw_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                    android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                    android:checked="false"
+                    android:text="@string/location"
+                    android:textSize="@dimen/secondary_text"
+                    android:textStyle="bold"
+                    android:theme="@style/SCBSwitch" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_card_view_height"
+                android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                android:layout_marginTop="@dimen/setting_margin_top_10dp"
+                android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="@dimen/setting_card_view_corner_radius">
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/sw_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                    android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                    android:checked="false"
+                    android:text="@string/notification"
+                    android:textSize="@dimen/secondary_text"
+                    android:textStyle="bold"
+                    android:theme="@style/SCBSwitch" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_card_view_height"
+                android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                android:layout_marginTop="@dimen/setting_margin_top_10dp"
+                android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="@dimen/setting_card_view_corner_radius">
+
+                <TextView
+                    android:id="@+id/tv_change_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                    android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                    android:drawableEnd="@mipmap/forward_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/change_password"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_card_view_height"
+                android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                android:layout_marginTop="@dimen/setting_margin_top_10dp"
+                android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="@dimen/setting_card_view_corner_radius">
+
+                <TextView
+                    android:id="@+id/tv_payment_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                    android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                    android:drawableEnd="@mipmap/forward_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/payment_method"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_card_view_height"
+                android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                android:layout_marginTop="@dimen/setting_margin_top_10dp"
+                android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="@dimen/setting_card_view_corner_radius">
+
+                <TextView
+                    android:id="@+id/tv_contact_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                    android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                    android:drawableEnd="@mipmap/forward_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/contact_us"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_card_view_height"
+                android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                android:layout_marginTop="@dimen/setting_margin_top_10dp"
+                android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="@dimen/setting_card_view_corner_radius">
+
+                <TextView
+                    android:id="@+id/tv_tearm_conditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                    android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                    android:drawableEnd="@mipmap/forward_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/terms_amp_conditions"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_card_view_height"
+                android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                android:layout_marginTop="@dimen/setting_margin_top_10dp"
+                android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="@dimen/setting_card_view_corner_radius">
+
+                <TextView
+                    android:id="@+id/tv_change_your_plane"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                    android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                    android:drawableEnd="@mipmap/forward_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/change_your_plan"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_card_view_height"
+                android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                android:layout_marginTop="@dimen/setting_margin_top_10dp"
+                android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="@dimen/setting_card_view_corner_radius">
+
+                <TextView
+                    android:id="@+id/tv_deactivate_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/setting_margin_start_end_20dp"
+                    android:layout_marginEnd="@dimen/setting_margin_start_end_20dp"
+                    android:drawableEnd="@mipmap/forward_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/deactivate_account"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+
+            <Button
+                android:id="@+id/btn_log_out"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30sp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round_button_green"
+                android:text="@string/logout"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

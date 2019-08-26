@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_all_recipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/recipe_main_background"
+    tools:context=".views.fragments.recipeFragments.AllRecipiesFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_above"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_title_height"
+        android:layout_marginStart="@dimen/all_screen_title_margin_start_end"
+        android:layout_marginEnd="@dimen/all_screen_title_margin_start_end">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/questrial_regular"
+            android:text="@string/this_week_s_menu"
+            android:textColor="@color/black"
+            android:textSize="@dimen/page_titles"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_add_recipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/all_recipe_padding"
+            android:src="@mipmap/plus" />
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_all_recipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_above"
+        android:layout_marginTop="10dp"
+        android:layoutAnimation="@anim/layout_animation"
+        android:paddingLeft="@dimen/all_recipe_padding"
+        android:paddingTop="@dimen/all_recipe_padding"
+        android:paddingRight="@dimen/all_recipe_padding" />
+
+    <TextView
+        android:id="@+id/tv_no_recipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/no_recipe_margin_top"
+        android:gravity="center"
+        android:text="@string/no_recipe_in_this_plan"
+        android:textSize="@dimen/list_item_titles_important_text_snippets"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

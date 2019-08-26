@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".views.fragments.shoppinListFragments.OrderTimeFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@mipmap/back"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/questrial_regular"
+            android:text="Order"
+            android:textColor="@color/black"
+            android:textSize="@dimen/page_titles"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        android:layout_below="@id/rl_above"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tv_order_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:text="Select a Date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/page_titles"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_order_title"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_today"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_line_background"
+                    android:gravity="center"
+                    android:text="Today"
+                    android:textSize="@dimen/list_item_titles_important_text_snippets"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_tomorrow"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1.4"
+                    android:background="@drawable/round_line_background"
+                    android:gravity="center"
+                    android:text="Tomorrow"
+                    android:textSize="@dimen/list_item_titles_important_text_snippets"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_order_date"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_line_background"
+                    android:gravity="center"
+                    android:text="24 Aug"
+                    android:textSize="@dimen/list_item_titles_important_text_snippets"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/ll_date"
+                android:layout_marginTop="20dp"
+                android:background="@color/order_bacground">
+            <TextView
+                android:id="@+id/tv_time_tile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Select time of delivery"
+                android:textColor="@color/black"
+                android:textSize="@dimen/page_titles"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_morning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_time_tile"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_button_pick_or_delivey_white">
+
+
+                <TextView
+                    android:id="@+id/tv_morning_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="10.00am  - 12.30pm"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/list_item_titles_important_text_snippets"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_morning_available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_morning_time"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Available"
+                    android:textSize="@dimen/secondary_text" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_afternoon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_morning"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_button_pick_or_delivey_white">
+
+
+                <TextView
+                    android:id="@+id/tv_afternoon_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="01.30pm  - 04.30pm"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/list_item_titles_important_text_snippets"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_afternoon_available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_afternoon_time"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Available"
+                    android:textSize="@dimen/secondary_text" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_evening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_afternoon"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_button_pick_or_delivey_white">
+
+
+                <TextView
+                    android:id="@+id/tv_evening_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="05.30pm  - 08.00pm"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/list_item_titles_important_text_snippets"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_evening_avilable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_evening_time"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Available"
+                    android:textSize="@dimen/secondary_text" />
+
+
+            </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/btn_later"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange_color"
+                android:textSize="@dimen/secondary_text"
+                android:text="YOUR ORDER"/>
+
+            <TextView
+                android:id="@+id/tv_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/list_item_titles_important_text_snippets"
+                android:textStyle="bold"
+                android:text="$ 00.00"/>
+
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_checkout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/round_button_green"
+            android:text="Checkout"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.fragments.shoppinListFragments.AllRecipeShoppingCartFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@mipmap/back"
+            android:contentDescription="@string/todo"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Cart List"
+            android:textColor="@color/black"
+            android:textSize="@dimen/page_titles"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/questrial_regular"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_item_not_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_above"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:text="No Item Found"
+        android:textColor="@color/green_text_color"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recipe_ingredients"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_above"
+        android:layout_above="@id/rl_check_out"
+        android:layout_marginStart="@dimen/recylerview_margin_start_end"
+        android:layout_marginTop="@dimen/recylerview_margin_top"
+        android:layout_marginEnd="@dimen/recylerview_margin_start_end"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_check_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_add_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/light_gray"
+                android:layout_centerVertical="true"/>
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_orange"
+                android:gravity="center"
+                android:layout_centerHorizontal="true">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="8dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/pluswhite"/>
+
+                <TextView
+                    android:id="@+id/tv_add_item"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/add_item"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/buttons_text_size" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_total_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_add_item"
+            android:layout_marginTop="5dp"
+            android:text="@string/total_price"
+            android:textStyle="bold"
+            android:layout_marginStart="40dp"
+            android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+        <TextView
+            android:id="@+id/tv_total_ingredients_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/rl_add_item"
+            android:text="$ 00.00"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/page_titles" />
+
+
+        <Button
+            android:id="@+id/btn_go_shopping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/tv_total_title"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/round_button_green"
+            android:text="@string/checkout_now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            android:textSize="@dimen/buttons_text_size" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".views.fragments.shoppinListFragments.AddressFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@mipmap/back"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/questrial_regular"
+            android:text="Order"
+            android:textColor="@color/black"
+            android:textSize="@dimen/page_titles"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_above="@id/ll_next_later"
+        android:layout_below="@id/rl_above"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_above">
+
+
+            <TextView
+                android:id="@+id/tv_order_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:text="How would you like to receive your  groceries?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/page_titles"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ll_pickup_delivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_order_title"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+
+                <FrameLayout
+                    android:id="@+id/fl_pickup"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button_pick_or_delivey_orange">
+
+
+                    <ImageView
+                        android:id="@+id/iv_pickup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@mipmap/pickup_white" />
+
+                    <TextView
+                        android:id="@+id/tv_pickup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Pickup"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/list_item_titles_important_text_snippets"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_delivery"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button_pick_or_delivey_white">
+
+
+                    <ImageView
+                        android:id="@+id/iv_delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@mipmap/delivery_orange" />
+
+                    <TextView
+                        android:id="@+id/tv_delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Delivery"
+                        android:textColor="@color/orange_color"
+                        android:textSize="@dimen/list_item_titles_important_text_snippets"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/et_shipping_address"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/ll_pickup_delivery"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_line_background"
+                android:drawableStart="@drawable/location"
+                android:drawablePadding="10dp"
+                android:hint="shipping address"
+                android:inputType="textPostalAddress"
+                android:paddingStart="15dp"
+                android:paddingLeft="10dp" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/places_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layoutAnimation="@anim/layout_animation"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_next_later"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <Button
+            android:id="@+id/btn_later"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Later"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/list_item_titles_important_text_snippets"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/round_button_green"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

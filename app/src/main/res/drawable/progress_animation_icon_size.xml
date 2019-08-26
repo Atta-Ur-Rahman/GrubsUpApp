@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:left="20dp"
+        android:right="20dp">
+
+        <bitmap
+            android:src="@drawable/progress_icon"
+            android:gravity="center" />
+
+    </item>
+
+</layer-list>

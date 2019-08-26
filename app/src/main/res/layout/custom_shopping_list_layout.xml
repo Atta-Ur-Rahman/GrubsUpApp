@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:paddingBottom="3dp">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_outer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background">
+
+            <ImageView
+                android:id="@+id/iv_sub_category_ingredients"
+                android:layout_width="90dp"
+                android:layout_height="85dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_shopping_ingredients_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:maxLines="2"
+                android:layout_toEndOf="@+id/iv_sub_category_ingredients"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Recipe Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/secondary_text" />
+
+
+            <TextView
+                android:id="@+id/tv_ingredient_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/rl_incre_decre"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="40dp"
+                android:text="$ 00.00"
+                android:textColor="@color/orange_color"
+                android:layout_centerVertical="true"
+                android:paddingTop="30dp"
+                android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_incre_decre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/iv_sub_category_ingredients"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:paddingTop="40dp">
+
+
+                <ImageView
+                    android:id="@+id/iv_minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_remove_icon" />
+
+                <TextView
+                    android:id="@+id/tv_shopping_qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toEndOf="@id/iv_minus"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+
+                <ImageView
+                    android:id="@+id/iv_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:layout_toEndOf="@id/tv_shopping_qty"
+                    android:src="@mipmap/plus" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tv_ingredient_total_item_price"
+                android:text="$"
+                android:textColor="@color/black"
+                android:textSize="@dimen/secondary_text" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_ingredient_total_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/iv_delete"
+                android:text="1"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                android:textSize="@dimen/secondary_text" />
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_delete"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/delete_button" />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

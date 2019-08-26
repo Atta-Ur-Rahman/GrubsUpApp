@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_delivery"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardElevation="3dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@mipmap/shoppin_icon" />
+    </android.support.v7.widget.CardView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/card_view_delivery">
+
+        <TextView
+            android:id="@+id/tv_order_no_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order No" />
+
+
+        <TextView
+            android:id="@+id/tv_delivery_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_order_no_title"
+            android:text="Delivery Date" />
+
+
+        <TextView
+            android:id="@+id/tv_delivery_time_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_delivery_date_title"
+            android:text="Delivery Time" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_delivery_time_title"
+            android:text="Address" />
+
+
+        <TextView
+            android:id="@+id/tv_order_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_order_no_title"
+            android:gravity="right"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="Order No"
+            tools:ignore="RtlHardcoded" />
+
+
+        <TextView
+            android:id="@+id/tv_delivery_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_order_no_title"
+            android:gravity="right"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="Delivery Date"
+            tools:ignore="RtlHardcoded" />
+
+
+        <TextView
+            android:id="@+id/tv_delivery_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_delivery_date_title"
+            android:gravity="right"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="Delivery Time"
+            tools:ignore="RtlHardcoded" />
+
+
+        <TextView
+            android:id="@+id/tv_delivery_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_delivery_time_title"
+            android:gravity="right"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="Address"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/card_view_delivery"/>
+
+</RelativeLayout>

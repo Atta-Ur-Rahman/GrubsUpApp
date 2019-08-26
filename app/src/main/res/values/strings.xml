@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">Grubs Up</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="nice_the_next_step_is_to_start">We make planning, shopping for, and cooking dinner easy and stress free</string>
+    <string name="todo">TODO</string>
+
+
+    <string name="font_family_condensed">sans-serif-condensed</string>
+
+
+    <array name="frequency_array">
+
+        <item>One-off</item>
+        <item>Weekly</item>
+        <item>Fortnightly</item>
+        <item>Monthly</item>
+        <item>Every second month</item>
+        <item>Quarterly</item>
+        <item>Twice a year</item>
+        <item>Annually</item>
+
+    </array>
+
+
+    <array name="size_array">
+        <item>"01"</item>
+        <item>"02"</item>
+        <item>"03"</item>
+        <item>"04"</item>
+        <item>"05"</item>
+        <item>"06"</item>
+        <item>"07"</item>
+        <item>"08"</item>
+        <item>"09"</item>
+        <item>"10"</item>
+        <item>"11"</item>
+        <item>"12"</item>
+        <item>"13"</item>
+        <item>"14"</item>
+        <item>"15"</item>
+    </array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="remove_from_cart">Remove from cart</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="your_preferences">Your Preferences</string>
+    <string name="your_preferences_detail">Every week we\'ll send you 7 easy recipes suited to your family?</string>
+    <string name="how_big_is_your_family">How big is your family?</string>
+    <string name="choose_your_dinner_plan">Choose your dinner plan</string>
+    <string name="google_maps_key">AIzaSyApfm1tIoU7Jc5LYiiAt32i1r2y1QnG7_c</string>
+    <string name="change_preference">Change Your Plan</string>
+
+
+    <!--login signup screen strings-->
+
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone_no">Phone No.</string>
+    <string name="upload_profile_picture">Upload \n profile picture</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="create_account">Create Account</string>
+    <string name="register">REGISTER</string>
+    <string name="facebook">facebook</string>
+    <string name="dont_have_an_account">Dont have an account?</string>
+    <string name="or">OR</string>
+    <string name="enter_vlid_name">enter a valid name</string>
+    <string name="enter_valid_email">enter a valid email address</string>
+    <string name="enter_valid_phone">enter a valid phone number</string>
+    <string name="password_between">between 6 and 12 alphanumeric characters</string>
+    <string name="password_dosnot_match">password does not match</string>
+    <string name="enter_email_address">enter email address</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="notification">Notification</string>
+    <string name="location">Location</string>
+    <string name="remember">Remember ?</string>
+    <string name="create">Create</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="log_in">Log In</string>
+    <string name="change_password">Change Password</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="change_your_plan">Change Your Plan</string>
+    <string name="deactivate_account">Deactivate Account</string>
+    <string name="logout">Logout</string>
+    <string name="settings">Settings</string>
+    <string name="this_week_s_menu">This Weekʼs Menu</string>
+    <string name="no_recipe_in_this_plan">No Recipe in this plan</string>
+    <string name="enter_item_name">Enter Item Name</string>
+    <string name="select_frequency">Select Frequency</string>
+    <string name="select_quantity">Select Quantity</string>
+    <string name="category_name">Category name</string>
+    <string name="add_item">Add Item</string>
+    <string name="total_price">Total price</string>
+    <string name="checkout_now">Checkout Now</string>
+    <string name="_44">+44</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

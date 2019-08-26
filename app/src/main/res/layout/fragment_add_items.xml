@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".views.fragments.shoppinListFragments.AddItemsFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/all_screen_title_margin_start_end"
+        android:layout_marginTop="@dimen/all_screen_title_margin_top">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/back"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/questrial_regular"
+            android:text="@string/add_item"
+            android:textColor="@color/black"
+            android:textSize="@dimen/page_titles"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_above"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add to Frequency List"
+                android:textColor="@color/orange_color"
+                android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+            <ImageView
+                android:id="@+id/iv_frequency"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/checked"
+                tools:ignore="RtlHardcoded" />
+        </FrameLayout>
+
+
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete_country"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/auto_complete_height"
+            android:layout_marginStart="@dimen/auto_complete_start_end_top"
+            android:layout_marginTop="@dimen/auto_complete_start_end_top"
+            android:layout_marginEnd="@dimen/auto_complete_start_end_top"
+            android:background="@android:color/transparent"
+            android:completionThreshold="1"
+            android:hint="@string/enter_item_name"
+            android:imeOptions="actionDone"
+            android:paddingStart="@dimen/auto_complete_start_end_top"
+            android:textSize="@dimen/page_titles"
+            tools:ignore="RtlSymmetry" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/add_item_margin_top"
+            android:paddingStart="@dimen/add_item_padding_start_end"
+            android:text="@string/select_frequency"
+            android:textColor="@color/black"
+            android:textSize="@dimen/list_item_titles_important_text_snippets"
+            tools:ignore="RtlSymmetry" />
+
+        <Spinner
+            android:id="@+id/sp_frequency"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/add_item_spinner_height"
+            android:layout_gravity="left"
+            android:layout_marginTop="@dimen/add_item_margin_top"
+            android:background="@drawable/bg_spinner"
+            android:pointerIcon="vertical_double_arrow"
+            tools:ignore="RtlHardcoded" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:paddingStart="@dimen/add_item_padding_start_end"
+            android:text="@string/select_quantity"
+            android:textColor="@color/black"
+            android:textSize="@dimen/list_item_titles_important_text_snippets"
+            tools:ignore="RtlSymmetry" />
+
+        <Spinner
+            android:id="@+id/sp_quality"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/add_item_spinner_height"
+            android:layout_gravity="left"
+            android:layout_marginTop="@dimen/add_item_margin_top"
+            android:background="@drawable/bg_spinner"
+            android:pointerIcon="vertical_double_arrow"
+            tools:ignore="RtlHardcoded" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tv_category_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Qty"
+                android:textColor="@color/orange_color"
+                android:textSize="@dimen/list_item_titles_important_text_snippets" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardElevation="3dp">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_gravity="center_vertical"
+                    android:pointerIcon="vertical_double_arrow"
+                    tools:ignore="RtlHardcoded" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardElevation="3dp">
+
+                <FrameLayout
+                    android:id="@+id/fl_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/orange_color"
+                    android:textSize="16sp">
+
+                    <TextView
+                        android:id="@+id/tv_qty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingStart="15dp"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        tools:ignore="RtlHardcoded">
+
+
+                        <ImageView
+                            android:id="@+id/iv_increment"
+                            android:layout_width="40dp"
+                            android:layout_height="0sp"
+                            android:layout_weight="1"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_arrow_drop_up" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_decrement"
+                            android:layout_width="40dp"
+                            android:layout_height="0sp"
+                            android:layout_weight="1"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_arrow_drop_down" />
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/orange_color"
+                    android:textSize="16sp"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/et_kg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="enter grams"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="10dp" />
+
+                </FrameLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_above="@id/btn_add_to_cart"
+        android:layout_centerVertical="true"
+        android:background="@color/light_gray" />
+
+    <Button
+        android:id="@+id/btn_add_to_cart"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/round_button_green"
+        android:text="Add to Cart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/buttons_text_size" />
+</RelativeLayout>

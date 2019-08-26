@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".views.fragments.shoppinListFragments.CongratulationsFragment">
+
+    <ImageView
+        android:id="@+id/iv_congratulations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@mipmap/check" />
+
+
+    <TextView
+        android:id="@+id/tv_congratulations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_congratulations"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Order successful"
+        android:textColor="@color/orange_color"
+        android:textSize="@dimen/page_titles"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_congratulations"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:text="You will receive an email from the
+supermarket confirming details and
+when to collect or expect it"
+        android:textSize="@dimen/paragraph_text" />
+
+
+    <Button
+        android:id="@+id/btn_back_to_home"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/hundered"
+        android:background="@drawable/round_button_purple"
+        android:text="Back to Home"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/buttons_text_size" />
+
+
+</RelativeLayout>
