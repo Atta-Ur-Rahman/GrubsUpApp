@@ -68,8 +68,7 @@ public class AddItemsFragment extends Fragment implements View.OnClickListener {
 
     @BindView(R.id.iv_frequency)
     ImageView ivFrequency;
-    @BindView(R.id.autocomplete_country)
-    AutoCompleteTextView autoCompleteTextView;
+
 
     @BindView(R.id.tv_category_type)
     TextView tvCategoryType;
@@ -85,6 +84,9 @@ public class AddItemsFragment extends Fragment implements View.OnClickListener {
     Dialog alertDialog;
     AutoCompleteIngredientsAdapter adapter;
     List<GetAllIngredientsWithOutCategoryDataModel> autoCompleteIngredientsArrayList = new ArrayList<>();
+
+    @BindView(R.id.autocomplete_country)
+    AutoCompleteTextView autoCompleteTextView;
 
     String strItemId, strCategoryId = null, strCategoryName, strNewItemName, strUnitPrice, strQuantity, strDiscount, strThumbnail, strItemName, strQuality = "Small", strItemFrequency = "Weekly", strQty;
 

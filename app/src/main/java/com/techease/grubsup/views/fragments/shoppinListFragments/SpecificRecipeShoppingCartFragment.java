@@ -45,6 +45,7 @@ public class SpecificRecipeShoppingCartFragment extends Fragment implements View
     View parentView;
 
     List<SpecificShoppingCartCategoryModel> specificShoppingCartCategoryModels = new ArrayList<>();
+
     SpecificShoppingCartCategoryAdapter specificShoppingCartCategoryAdapter;
     List<SpecificShoppingCartIngredientsDataModel> specificShoppingCartIngredientsDataModels = new ArrayList<>();
 

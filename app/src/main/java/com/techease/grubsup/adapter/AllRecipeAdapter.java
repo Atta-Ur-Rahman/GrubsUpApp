@@ -1,5 +1,6 @@
 package com.techease.grubsup.adapter;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -70,7 +71,7 @@ public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.View
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final AllRecipeAdapter.ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(@NonNull final AllRecipeAdapter.ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
 
 
         final GetAllRecipeDataModel allRecipiesModel = getRecipiesDataModels.get(i);
